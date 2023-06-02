@@ -112,14 +112,14 @@ const Home: NextPage<ProductProps> = ({products}) => {
 // Aquí debemos agregar el método para obtener la información
 // de la API
 
-// export const getServerSideProps: GetServerSideProps = async ({locale}) => {
+ export const getServerSideProps: GetServerSideProps = async ({locale}) => {
 
-//   const response = await fetch (`http://localhost:3000/api/products/${locale}`);
-//   const products = await response.json();
+   const response = await fetch (`https://tienda-iota-virid.vercel.app/api/products/${locale}`);
+   const products = await response.json();
 
-//   return {
-//     props: {products}
-//   }
-// }
+  return {
+    props: {products}
+  }
+ }
 
 export default Home;

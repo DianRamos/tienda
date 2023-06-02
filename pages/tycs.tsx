@@ -41,16 +41,16 @@ const TerminosYCondiciones: NextPage<IProps> = ({data}) => {
 
 // Aquí debemos agregar el método para obtener la información
 // de la API
-// export async function getStaticProps({locale,}: {locale: string;}){
+ export async function getStaticProps({locale,}: {locale: string;}){
   
-//   const baseUrl = "http://localhost:3000/";
-//   const response = await fetch(`${baseUrl}/api/tycs/${locale}`);
-//   const data = await response.json();
-//   return {
-//     props:{data,},
+   const baseUrl = "https://tienda-iota-virid.vercel.app";
+   const response = await fetch(`${baseUrl}/api/tycs/${locale}`);
+   const data = await response.json();
+   return {
+     props:{data,},
   
-//   }
-// }
+   }
+ }
 
 
 export default TerminosYCondiciones;
