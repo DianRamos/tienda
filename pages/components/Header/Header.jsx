@@ -33,9 +33,7 @@ const Header = () => {
         <Link href="./tycs">{`${HEADER.TYCS}`}</Link>
       </div>
       <div className={styles.localeSwitch}>
-        {/* Mediante el atributo locale le indicamos a Next que idioma queremos utilizar al hacer la
-          redirección
-           */}
+       
         <Link href={asPath} locale={locales.ES_ES}>
           <p className={locale === locales.ES_ES ? styles.active : ""}>
             <Image
